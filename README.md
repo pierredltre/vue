@@ -1,15 +1,15 @@
-# To do list
+# To Do List
 
--- Système
+## Système
 [x] Création de la to do list
 [x] Ajout des items
 
--- Single Task Item
+## Task Item
 [x] Ajouter
 [x] Valider
 [] Supprimer
 [] Modifier
 
--- Store
+## Store items
 [] Mettre en place un store
 [] Tester avec VueX

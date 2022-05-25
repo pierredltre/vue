@@ -38,7 +38,7 @@
   <div id="tasks">
     <h1>To do list</h1>
     <div class="tasks-items" v-for="item in tasks" :key="item.id">
-      <TaskItem :task="item.task" @done="item.done = !item.done" :done="item.done" @del="del"/>
+      <TaskItem :task="item.task" @done="item.done = !item.done" :done="item.done" @del="del" />
     </div>
     <CreateTask @addTask="addTask" />
   </div>
