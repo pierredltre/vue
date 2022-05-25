@@ -11,7 +11,6 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'home',
-      // component: HomeView
     },
     {
       path: '/todo',
