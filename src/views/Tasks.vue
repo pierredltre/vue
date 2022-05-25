@@ -11,7 +11,7 @@
       }
     },
     methods: {
-      addTask(task) {
+      add(task) {
         let p = {
           task: task,
           done: false
@@ -21,14 +21,15 @@
       },
 
       del() {
-        for(let i = 0; i < this.tasks.length; i++) {
-          console.log(this.tasks[i]);
-          let found = Array.from(this.tasks).indexOf(this);
-          if (found) {
-            this.tasks.splice(found, 1);
-            console.log(this.tasks);
-          }
+        let found = Array.from(this.tasks).indexOf(this);
+        if (found) {
+          this.tasks.splice(found, 1);
+          console.log(this.tasks);
         }
+      },
+
+      update() {
+
       }
     }
   }
@@ -40,7 +41,7 @@
     <div class="tasks-items" v-for="item in tasks" :key="item.id">
       <TaskItem :task="item.task" @done="item.done = !item.done" :done="item.done" @del="del" />
     </div>
-    <CreateTask @addTask="addTask" />
+    <CreateTask @add="add" />
   </div>
 </template>
 
@@ -64,7 +65,8 @@ body {
   border-radius: 20px;
 }
 
-.tasks-items:first-of-type {
-  margin-top: 1rem;
+h1 {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black
 }
 </style>

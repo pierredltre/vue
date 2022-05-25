@@ -15,9 +15,11 @@
         if(this.done) {
           return "text-decoration: line-through";
         }
-      },
+      }
+    },
+    methods: {
       del(task) {
-        this.$emit('del', task)
+        this.$emit('del', task) 
       }
     }
   }
@@ -34,7 +36,7 @@
 
 <style scoped>
   div {
-    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 1rem 0;
   }
 

@@ -7,9 +7,9 @@ export default {
     }
   },
   methods: {
-    clicked(task) {
+    add(task) {
       if(task.length > 0) {
-        this.$emit('addTask', task);
+        this.$emit('add', task);
       }
     }
   }
@@ -19,7 +19,7 @@ export default {
 <template>
   <div>
     <input type="text" name="newTask" v-model="task">
-    <button @click="clicked(task)">Ajouter</button>
+    <button @click="add(task)">Ajouter</button>
   </div>
 </template>
 
